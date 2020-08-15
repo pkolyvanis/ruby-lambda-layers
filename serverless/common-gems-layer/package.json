@@ -1,0 +1,7 @@
+{
+  "name": "common-gems",
+  "version": "1.0.0",
+  "dependencies": {
+    "serverless-hooks-plugin": "^1.1.0"
+  }
+}

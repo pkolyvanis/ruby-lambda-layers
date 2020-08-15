@@ -1,0 +1,32 @@
+service: common-gems-layer
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  hooks: # serverless-hooks-plugin configuration
+    package:initialize:
+      - ./build.sh
+
+provider:
+  name: aws
+  runtime: ruby2.7
+  stage: dev
+  region: eu-west-2
+
+layers:
+  CommonGems:
+    name: common-gems
+    description: Common Ruby Gems
+    path: layer
+    compatibleRuntimes:
+      - ruby2.7
+
+resources:
+  Outputs:
+    CommonGemsLayerArn:
+      Value:
+        Ref: CommonGemsLambdaLayer
+      Export:
+        Name: common-gems-arn
+
+plugins:
+  - serverless-hooks-plugin

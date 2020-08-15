@@ -1,0 +1,35 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    crass (1.0.6)
+    htmlentities (4.3.4)
+    mini_portile2 (2.4.0)
+    multi_json (1.15.0)
+    mustache (1.1.1)
+    nokogiri (1.10.10)
+      mini_portile2 (~> 2.4.0)
+    nokogumbo (2.0.2)
+      nokogiri (~> 1.8, >= 1.8.4)
+    onebox (2.0.1)
+      addressable (~> 2.7.0)
+      htmlentities (~> 4.3)
+      multi_json (~> 1.11)
+      mustache
+      nokogiri (~> 1.7)
+      sanitize
+    public_suffix (4.0.5)
+    sanitize (5.2.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.8.0)
+      nokogumbo (~> 2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  onebox (~> 2.0)
+
+BUNDLED WITH
+   2.1.4
